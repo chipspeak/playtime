@@ -1,0 +1,37 @@
+{
+  "name": "playtime",
+  "version": "0.1.0",
+  "description": "",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "lint": "./node_modules/.bin/eslint . --ext .js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chipspeak/playtime.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chipspeak/playtime/issues"
+  },
+  "homepage": "https://github.com/chipspeak/playtime#readme",
+  "dependencies": {
+    "@hapi/cookie": "^12.0.1",
+    "@hapi/hapi": "^21.3.2",
+    "@hapi/vision": "^7.0.3",
+    "dotenv": "^16.3.2",
+    "eslint": "^8.56.0",
+    "handlebars": "^4.7.8",
+    "joi": "^17.12.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "prettier": "^3.2.2"
+  }
+}
