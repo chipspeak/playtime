@@ -11,6 +11,7 @@ export const playlistJsonStore = {
   async addPlaylist(playlist) {
     await db.read();
     playlist._id = v4();
+    playlist.tracks = [];
     db.data.playlists.push(playlist);
     await db.write();
     return playlist;
@@ -18,9 +19,16 @@ export const playlistJsonStore = {
 
   async getPlaylistById(id) {
     await db.read();
-    const list = db.data.playlists.find((playlist) => playlist._id === id);
-    list.tracks = await trackJsonStore.getTracksByPlaylistId(list._id);
-    return list;
+    let p = db.data.playlists.find((playlist) => playlist._id === id);
+    if (p === undefined) {
+      p = null;
+      return p;
+    }
+    p.tracks = await trackJsonStore.getTracksByPlaylistId(p._id);
+    if (p.tracks === undefined) {
+      p.tracks = null;
+    }
+    return p;
   },
 
   async getUserPlaylists(userid) {
@@ -31,7 +39,7 @@ export const playlistJsonStore = {
   async deletePlaylistById(id) {
     await db.read();
     const index = db.data.playlists.findIndex((playlist) => playlist._id === id);
-    db.data.playlists.splice(index, 1);
+    if (index !== -1) db.data.playlists.splice(index, 1);
     await db.write();
   },
 

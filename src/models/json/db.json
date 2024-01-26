@@ -1,18 +1,55 @@
 {
   "users": [
     {
-      "firstName": "John",
-      "lastName": "Doe",
-      "email": "johndoe@email.com",
-      "password": "123456",
-      "_id": "38b8628d-2cae-42b1-b4df-09ca5b1c19d8"
+      "firstName": "Homer",
+      "lastName": "Simpson",
+      "email": "homer@simpson.com",
+      "password": "secret",
+      "_id": "2ec423da-55d6-4a16-92ac-3f1d5f0d254f"
+    },
+    {
+      "firstName": "Marge",
+      "lastName": "Simpson",
+      "email": "marge@simpson.com",
+      "password": "secret",
+      "_id": "c09654e2-7265-417e-a9de-de2478dda730"
+    },
+    {
+      "firstName": "Bart",
+      "lastName": "Simpson",
+      "email": "bart@simpson.com",
+      "password": "secret",
+      "_id": "6904dc1d-d44d-47b3-bf65-1c52f716ef80"
+    },
+    {
+      "firstName": "Patrick",
+      "lastName": "O'Connor",
+      "email": "pwoconnor@hotmail.co.uk",
+      "password": "secret",
+      "_id": "202eeac7-990d-4a31-a409-ae5f3807b3fe"
     }
   ],
   "playlists": [
     {
-      "userid": "38b8628d-2cae-42b1-b4df-09ca5b1c19d8",
+      "title": "Classical",
+      "_id": "69b8d9b3-108a-4a0c-9467-a4cd39e058d9",
+      "tracks": []
+    },
+    {
+      "title": "Romantic",
+      "_id": "c570b670-7b47-4a49-84f5-97ae7d2414db",
+      "tracks": []
+    },
+    {
+      "title": "Modern",
+      "_id": "cfd8fba1-3e15-4e6e-bdca-f92048097950",
+      "tracks": []
+    },
+    {
+      "userid": "202eeac7-990d-4a31-a409-ae5f3807b3fe",
       "title": "Jazz",
-      "_id": "e07f8944-40cf-4f5b-9c68-4781d58d92b2"
+      "_id": "c27e92af-964d-492d-a3b3-ea2610e3c6de",
+      "tracks": []
     }
   ],
   "tracks": [
@@ -20,15 +57,8 @@
       "title": "Blue In Green",
       "artist": "Miles Davis",
       "duration": 623,
-      "_id": "b6b4fe1d-b021-48fe-9249-9d1edbb17589",
-      "playlistid": "e07f8944-40cf-4f5b-9c68-4781d58d92b2"
-    },
-    {
-      "title": "Moanin",
-      "artist": "Charles Mingus",
-      "duration": 457,
-      "_id": "b2bb3e54-b3e6-4215-8a74-b66a46688edb",
-      "playlistid": "e07f8944-40cf-4f5b-9c68-4781d58d92b2"
+      "_id": "6c660f34-ccab-4631-8b1c-42d2545fb535",
+      "playlistid": "c27e92af-964d-492d-a3b3-ea2610e3c6de"
     }
   ]
 }

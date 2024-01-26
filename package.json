@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "node src/server.js",
-    "lint": "./node_modules/.bin/eslint . --ext .js"
+    "lint": "./node_modules/.bin/eslint . --ext .js",
+    "test": "mocha --ui tdd test/**.js -exit"
   },
   "repository": {
     "type": "git",
@@ -30,9 +31,11 @@
     "uuid": "^9.0.1"
   },
   "devDependencies": {
+    "chai": "^5.0.3",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
+    "mocha": "^10.2.0",
     "prettier": "^3.2.2"
   }
 }
