@@ -5,28 +5,21 @@
       "lastName": "Simpson",
       "email": "homer@simpson.com",
       "password": "secret",
-      "_id": "2ec423da-55d6-4a16-92ac-3f1d5f0d254f"
+      "_id": "b8ccc06e-2dc0-4d1e-a678-e4788a60f36e"
     },
     {
       "firstName": "Marge",
       "lastName": "Simpson",
       "email": "marge@simpson.com",
       "password": "secret",
-      "_id": "c09654e2-7265-417e-a9de-de2478dda730"
+      "_id": "0a3ea781-9cd9-4904-ae01-f43b575fae2a"
     },
     {
       "firstName": "Bart",
       "lastName": "Simpson",
       "email": "bart@simpson.com",
       "password": "secret",
-      "_id": "6904dc1d-d44d-47b3-bf65-1c52f716ef80"
-    },
-    {
-      "firstName": "Patrick",
-      "lastName": "O'Connor",
-      "email": "pwoconnor@hotmail.co.uk",
-      "password": "secret",
-      "_id": "202eeac7-990d-4a31-a409-ae5f3807b3fe"
+      "_id": "26ef6f6b-4ee2-4c94-89d4-d645c7e4ea87"
     }
   ],
   "playlists": [

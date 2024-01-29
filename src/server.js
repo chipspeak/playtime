@@ -5,10 +5,10 @@ import path from "path";
 import dotenv from "dotenv"; 
 import { fileURLToPath } from "url";
 import Cookie from "@hapi/cookie";
+import Joi from "joi";
 import { webRoutes } from "./web-routes.js";
 import { db } from "./models/db.js";
 import { accountsController } from "./controllers/accounts-controller.js";
-import Joi from "joi";
 
 
 const __filename = fileURLToPath(import.meta.url);
@@ -35,7 +35,7 @@ async function init() {
     layout: true,
     isCached: false,
   });
-  db.init();
+  db.init("mongo");
   server.route(webRoutes);
   await server.start();
   console.log("Server running on %s", server.info.uri);

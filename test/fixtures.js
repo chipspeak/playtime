@@ -41,3 +41,16 @@ export const testPlaylists = [
     title: "Modern",
 },
 ];
+
+export const testTrack = {
+    title: "Bebop",
+    tracks: [
+        {
+        title: "Blue in Green",
+        artist: "Miles Davis",
+        duration: "623",
+        }
+    ],
+};
+
+

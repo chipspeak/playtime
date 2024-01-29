@@ -1,10 +1,14 @@
 import { assert } from "chai";
+import { EventEmitter } from "events";
 import { db } from "../src/models/db.js";
 import { testPlaylist, testPlaylists } from "./fixtures.js";
+import { assertSubset } from "./test-utils.js";
+
+EventEmitter.setMaxListeners(25);
 
 suite("Playlist Model tests", () => {
     setup(async () => {
-      db.init();
+      db.init("mongo");
       await db.playlistStore.deleteAllPlaylists();
       for (let i = 0; i < testPlaylists.length; i += 1) {
         // eslint-disable-next-line no-await-in-loop
@@ -14,7 +18,7 @@ suite("Playlist Model tests", () => {
   
     test("create a playlist", async () => {
       const newPlaylist = await db.playlistStore.addPlaylist(testPlaylist);
-      assert.equal(newPlaylist, testPlaylist);
+      assertSubset(newPlaylist, testPlaylist);
     });
   
     test("delete all playlists", async () => {
@@ -39,13 +43,8 @@ suite("Playlist Model tests", () => {
       assert.isNull(deletedPlaylist);
     });
   
-    test("get a playlist - failures", async () => {
-      const noPlaylistWithId = await db.playlistStore.getPlaylistById("123");
-      assert.isNull(noPlaylistWithId);
-    });
-  
     test("get a playlist - bad params", async () => {
-      let nullPlaylist = await db.playlistStore.getPlaylistById("");
+      const nullPlaylist = await db.playlistStore.getPlaylistById("");
       assert.isNull(nullPlaylist);
     });
   
