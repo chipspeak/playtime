@@ -17,8 +17,9 @@ export const playlistController = {
     validate: {
       payload: TrackSpec,
       options: { abortEarly: false },
-      failAction: function (request, h, error) {
-        return h.view("playlist-view", { title: "Add track error", errors: error.details }).takeover().code(400);
+      failAction: async function (request, h, error) {
+        const currentPlaylist = await db.playlistStore.getPlaylistById(request.params.id);
+        return h.view("playlist-view", { title: "Add track error", playlist:currentPlaylist, errors: error.details }).takeover().code(400);
       },
     },
     handler: async function (request, h) {
